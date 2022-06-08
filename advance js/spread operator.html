@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function abc(name,course, ...args){  // rest function
+
+            document.write(name);
+            document.write(args)
+
+            var x = 0 ;
+
+            for(var i in args){
+                x += args[i];
+            }
+
+            document.write(x);
+        }
+
+        var a = [10,20,30];
+
+        var x = abc("nik","BE", ...a);  // spread operator
+
+        var b = [50,100,150];
+
+        console.log(b);
+        console.log(...b);
+        console.log([...b])
+
+        var c = [60 , ...a , ...b] ;
+
+        console.log(c);
+
+        var obj1 = {
+            name : "nikunj" 
+        };
+
+        var obj2 = {
+            surname : "ghoghari" 
+        };
+
+        var obj3 = {...obj1 , ...obj2};
+
+        console.log(obj3)
+
+
+    </script>
+</body>
+</html>

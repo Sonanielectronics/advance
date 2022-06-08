@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function sum(name , ...args){
+        // function sum(){
+
+            // console.log(arguments);
+
+            var sum = 0 ;
+
+            for(var i in arguments){
+                sum += arguments[i];
+            }
+
+            console.log(sum);
+        }
+        var x = sum(20,30,40);
+        // console.log(sum);  // we can't run this function here
+
+//////////////////////////////////////////////////////////////// rest function //////////////////////////////
+
+        // function abc(name , ...args){  // rest function
+
+        //     document.write(name);
+        //     document.write(args)
+
+        //     var x = 0 ;
+
+        //     for(var i in args){
+        //         x += args[i];
+        //     }
+
+        //     document.write(x);
+        // }
+        // var x = abc("nik",50,30,40);
+
+        function abc(name,course, ...args){  // rest function
+
+            document.write(name);
+            document.write(args)
+
+            var x = 0 ;
+
+            for(var i in args){
+                x += args[i];
+            }
+
+            document.write(x);
+        }
+        var x = abc("nik","BE",50,30,40);
+
+    </script>
+</body>
+</html>
